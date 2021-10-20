@@ -1,0 +1,161 @@
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+.wrapper{
+    display:flex;
+    flex-direction: column;
+    text-align:left;
+    padding: 0px;
+    position: static;
+    width: 456px;
+    margin: 0 auto;
+    align-items: right;
+   
+}
+.title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+}
+.plaintext{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+}
+.progress-bar{
+    margin-top: 52px;
+}
+h1{
+    position: static;
+    height: 36px;
+    width: 456px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom: 0;
+  
+}
+.plaintext{
+    width: 456px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 16px;
+    margin-bottom: 0;
+
+}
+.register-form-container{
+    width: 456px;
+    margin: 0 auto;
+    margin-top: 32px;
+    border: 1px solid #E2E4E5;
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+}
+h2{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    display: flex;
+    text-align: center;
+    color: #242731;
+    margin-bottom: 2px;
+}
+.information{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    display: flex;
+    text-align: center;
+    color: #575F6E;
+}
+.register-form-container{
+    .registration-info{
+        margin-bottom: 32px;
+    }
+    .form-control{
+        margin-bottom: 32px;
+    }
+}
+.form-button{
+
+    margin-top: 32px;
+    float:left;
+}
+.form-button button{
+    
+    float:left;
+    padding: 12px 56px 12px 32px;
+    width:187px; 
+    border: 1px solid #BBBFC1;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 4px;
+    left:555px;
+    right:695px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+}
+input[type=text]{
+    position: static;
+    height: 44px;
+    left: 4.08%;
+    right: 4.08%;
+    position: static;
+    width: 392px;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-bottom: 1px solid #E2E4E5;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    padding:16px 8px 16px 8px;
+
+}
+
+.form-button button:disabled{
+    color:#333;
+}
+.form-button button:hover{
+    color: #fff;
+    background: #333;
+    transition: all .3s linear;
+
+}
+
+.register-form-container label{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+input.ng-touched.ng-invalid{
+    border-color:red;
+}
+input.ng-valid{
+    border-color:rgb(30, 221, 30);
+}
+small{
+    color:red;
+    margin-top:2px;
+    font-family: 'Roboto';
+}
+input:focus{
+    border-bottom: 1px solid #007AFF;
+    
+}

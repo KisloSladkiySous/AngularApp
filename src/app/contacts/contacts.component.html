@@ -1,0 +1,98 @@
+<div  class="wrapper">
+    <div class="progress-bar">
+      <img src="../../assets/images/Progress_bar_next.svg" alt="" />
+    </div>
+    <div class="title">
+      <h1>Личные данные</h1>
+      <p>Заполните данные вашего профиля.Это займет всего пару минут.</p>
+    </div>
+    <form class="myForm" [formGroup]="contactsForm" (ngSubmit)="submit()" >
+      <div class="registration-form-container">
+        <div class="contact-form">
+          <div class="contacts-title">
+            <h2>Контакты</h2>
+            <p>Контакты нужны для связи с вами.</p>
+          </div>
+          <div class="email-field"  [ngClass]="{invalid:contactsForm.get('email').touched && contactsForm.get('email').invalid}">
+              <label for="email">Email</label><br />
+            <input
+              id="email"
+              class="email-input"
+              placeholder="example@mail.ru"
+              formControlName="email"
+              [(ngModel)]="contacts.email"
+            />
+            <div class="validation" 
+            *ngIf="contactsForm.get('email')?.touched && contactsForm.get('email')?.invalid">
+             <small *ngIf="contactsForm.get('email').errors.required">Это обязательное поле</small>
+             <small *ngIf="contactsForm.get('email').errors.email">Некорректный email</small>
+            </div>
+          </div>
+          <div class="phone-number-field" [ngClass]="{invalid:contactsForm.get('phoneNumber').touched && contactsForm.get('phoneNumber').invalid}">
+          <label for="phone">Контактный телефон</label><br />
+            <input
+              id="phone"
+              class="phone-input"
+              placeholder="8985-283-71-42"
+              formControlName="phoneNumber"
+              [(ngModel)]="contacts.phoneNumber"
+            />
+            <div class="validation" 
+            *ngIf="contactsForm.get('phoneNumber')?.touched && contactsForm.get('phoneNumber')?.invalid">
+             <small *ngIf="contactsForm.get('phoneNumber').errors.required">Это обязательное поле</small>
+             <small *ngIf="contactsForm.get('phoneNumber').errors.pattern">Некорректный номер телефона</small>
+            </div>
+          </div>
+        </div>
+        <div class="address-form">
+          <div class="address-tilte">
+            <h2>Адрес</h2>
+            <p>Адрес нужен для поиска проишествий рядом с вам.</p>
+          </div>
+          <div class="address-field" [ngClass]="{invalid: contactsForm.get('address').invalid}">
+            <input  class="address-input" 
+            id="address"  
+            formControlName="address" 
+            [(ngModel)]="contacts.address"
+           
+           />
+               <button  type="submit" class="modal-button" (click)="buttonToggle=!buttonToggle" >  Карта</button>
+          </div>
+        </div>
+        <div class="date-form">
+          <div class="date-tilte">
+            <h2>Дата и время</h2>
+            <p>Адрес нужен для поиска проишествий рядом с вам.</p>
+          </div>
+          <div class="date-feld" [ngClass]="{invalid:contactsForm.get('date').touched && contactsForm.get('date').invalid}" >
+            <input  
+            required type="datetime-local" 
+            class="date-and-time-picker" 
+            placeholder="Календарь" 
+            id="DTP"
+            formControlName="date"
+            [(ngModel)]="contacts.date">
+          </div>
+        </div>
+      </div>
+      <div class="form-button">
+        <button type="submit"
+         class="form-button" 
+         routerLink="/data" 
+         [disabled]="contactsForm.invalid" 
+         (click)="addItems()"
+         >Продолжить</button>
+      </div>
+    </form>
+  
+    <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChooseLocation($event)" [ngStyle]="{
+        'position':'absolute',
+        'width': '455px',
+        'height': '350px',
+        'display': buttonToggle ? 'block' : 'none',
+        'top':'250px' 
+    }">
+        <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+       </agm-map> 
+  </div>
+  

@@ -1,0 +1,42 @@
+<div class="wrapper">
+    <div class="progress-bar">
+      <img src="../../assets/images/ProgressBarThird.svg" alt="" />
+      <div class="title">
+        <h1>Обработка данных</h1>
+        <p>
+          Нам необходимо получить от Вас согласие на обработку Ваших данных.
+        </p>
+      </div>
+      <form type="submit" [formGroup]="dataForm"  (ngSubmit)="submit()" >
+        <div class="registration-form-container">
+          <div class="registration-title">
+            <h2>Согласие на обработку персональных данных</h2>
+            <p>Необходимы для корректной работы приложения</p>
+          </div>
+          <div class="checkbox-field">
+            <div class="data-checkbox" [ngClass]="{valid:dataForm.get('dataCB').touched}">
+              <input type="checkbox" 
+              id="datacheckbox" 
+              formControlName="dataCB" 
+              [(ngModel)]="checkBoxes.dataCB"/>
+              <label for="datacheckbox">
+                Даю согласие на обработку персональных данных
+              </label>
+            </div>
+            <div class="alert-checkbox">
+              <input type="checkbox" 
+              id="alertchecbox" 
+              [ngModelOptions]="{standalone: true}"
+              [(ngModel)]="checkBoxes.alertCB"
+              />
+              <label for="alertchecbox">
+                Оповещать, если по данному адресу найдены происшествия
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-button">
+          <button [disabled]="dataForm.invalid" type="submit" class="confirm" (click)="printItems()" >Сохранить</button>
+        </div>
+      </form>
+    </div>

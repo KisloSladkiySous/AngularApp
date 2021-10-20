@@ -1,0 +1,50 @@
+<main>
+    <div class="wrapper">
+      <div class="progress-bar">
+        <img src="../../assets/images/ProgressBar.svg" alt="" />
+      </div>
+      <h1 class="title">Регистрация</h1>
+      <p class="plaintext">
+        Заполните данные вашего профиля.Это займет всего пару минут.
+      </p>
+      <form  class="myForm" [formGroup]="form" (ngSubmit)="submit()">
+        <div class="register-form-container">
+          <div class="registration-info">
+            <h2 class="user-information-title">Личные данные</h2>
+            <p class="information">Введите данные как в вашем паспорте.</p>
+          </div>
+          <div class="form-control" [ngClass]="{invalid:form.get('fName')?.touched && form.get('fName')?.invalid}">
+            <label for="fName">Имя</label><br />
+            <input
+              type="text"
+              id="fName"
+              placeholder="Введите имя" 
+              formControlName="fName"
+              [(ngModel)]="Item.fName"
+            />
+           <div class="validation" 
+            *ngIf="form.get('fName')?.touched && form.get('fName')?.invalid">
+             <small *ngIf="form.get('fName').errors.required">Это обязательное поле</small>
+            </div>
+          </div>
+          <div class="form-control" [ngClass]="{invalid:form.get('lName')?.touched && form.get('lName')?.invalid}">
+            <label for="lName">Фамилия</label><br />
+            <input
+              type="text"
+              id="lName"
+              placeholder="Введите фамилию"
+              formControlName="lName"
+              [(ngModel)]="Item.lName"
+            />
+            <div class="validation" 
+            *ngIf="form.get('lName')?.touched && form.get('lName')?.invalid">
+             <small *ngIf="form.get('lName').errors.required">Это обязательное поле</small>
+            </div>
+          </div>
+        </div>
+        <div class="form-button">
+          <button  [disabled]="form.invalid" type="submit" routerLink="/contacts"  (click)="addItems()">Продолжить</button>
+        </div>
+      </form>
+    </div>
+  </main>

@@ -1,0 +1,288 @@
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+.body{
+    overflow:hidden;
+}
+.wrapper{
+    display:flex;
+    flex-direction: column;
+    text-align:left;
+    padding: 0px;
+    position: static;
+    width: 456px;
+    margin: 0 auto;
+    align-items: right;
+}
+.progress-bar{
+    margin-top: 52px;
+}
+.title{
+    margin-top: 80px;   
+}
+.registration-form-container{
+    width: 456px;
+    margin-top:32px;
+    border: 1px solid #E2E4E5;
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+    
+}
+ label{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+}
+ 
+h1{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    position: static;
+    height: 36px;
+    width: 456px;
+    margin-bottom: 16px;
+}
+h2{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: #242731;
+}
+.contacts-title {
+    h2{
+    margin-bottom: 2px;
+    }
+    p{
+        margin-bottom: 32px;
+    }
+}
+.email-field{
+    margin-bottom: 32px;
+}
+.phone-number-field{
+    margin-bottom: 48px;
+}
+.date-and-time-picker{
+    position: static;
+    height: 44px;
+    left: 4.08%;
+    right: 4.08%;
+    position: static;
+    text-align: left ;
+    width: 392px;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-bottom: 1px solid #E2E4E5;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    padding:16px 8px 16px 8px;
+}
+.map-model-window{  
+    width:30px;
+    height:44px;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-bottom: 1px solid #E2E4E5;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: #242426;
+    padding:16px 8px 16px 8px;
+    caret-color: transparent;
+    }
+.address-input{
+    position: static;
+    height: 44px;
+    left: 4.08%;
+    right: 4.08%;
+    position: static;
+    text-align: left ;
+    width: 288px;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-bottom: 1px solid #E2E4E5;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    padding:16px 8px 16px 8px;
+}
+    
+.address-tilte,.date-tilte {
+    
+    h2{
+    margin-bottom: 2px;
+    }
+    p{
+        margin-bottom: 32px;
+    }
+ 
+}
+agm-map{
+    height: 350px;
+}
+.map{
+    display:none;
+}
+.modal-body{
+    min-height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-button{
+    display: flex;
+    padding: 10px 45px 10px 45px;
+    width:25px; 
+    border: 1px solid #BBBFC1;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+.modal-button:hover{
+    color: #fff;
+    background: #007AFF;
+    transition: all .3s linear;
+}
+ 
+ 
+.address-form{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+.address-field{
+    display:flex;
+    align-items:flex-end;
+    
+}
+.title p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    color: #575F6E;
+}
+.registration-form-container{
+    p{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12px;
+        color: #575F6E;
+    }
+}
+.form-button button{
+    
+    float:left;
+    padding: 12px 56px 12px 32px;
+    width:187px; 
+    border: 1px solid #BBBFC1;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    margin-top: 32px;
+}
+.contact-form input{
+    position: static;
+    height: 44px;
+    left: 4.08%;
+    right: 4.08%;
+    position: static;
+    width: 392px;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-bottom: 1px solid #E2E4E5;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    padding:16px 8px 16px 8px;
+}
+.form-button button:disabled{
+    color:#333;
+}
+.form-button button:hover{
+    color: #fff;
+    background: #333;
+    transition: all .3s linear;
+ 
+}
+ 
+small{
+    color:red;
+    margin-top:2px;
+    font-family: 'Roboto';
+}
+.email-field input.ng-valid{
+    border-color:rgb(30, 221, 30);
+}
+.email-field input.ng-touched.ng-invalid{
+    border-color:red;
+}
+.email-field input:focus{
+    border-bottom: 1px solid #007AFF;
+    
+}
+.phone-number-field input:focus{
+    border-bottom: 1px solid #007AFF;
+    
+}
+.phone-number-field input.ng-valid{
+    border-color:rgb(30, 221, 30);
+}
+.phone-number-field input.ng-touched.ng-invalid{
+    border-color:red;
+}
+.address-field input:focus{
+    border-bottom: 1px solid #007AFF;
+    
+}
+.address-field input.ng-valid{
+    border-color:rgb(30, 221, 30);
+}
+.address-field input.ng-touched.ng-invalid{
+    border-color:red;
+}
+.date-feld input:focus{
+    border-bottom: 1px solid #007AFF;
+    
+}
+.date-feld input.ng-valid{
+    border-color:rgb(30, 221, 30);
+}
+.date-field input.ng-touched.ng-invalid{
+    border-color:red;
+}
+ 
